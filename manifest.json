@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-discord-share",
-	"name": "Discord Share",
-	"version": "2.6.1",
+	"id": "obsidian-discord-share-mdlink",
+	"name": "Discord Share - MarkdownLink Alias Setup",
+	"version": "2.6.1.1",
 	"minAppVersion": "1.4.13",
-	"description": "This is a plugin for sharing Obsidian vault content directly to Discord.",
-	"author": "PhD20",
+	"description": "This is a plugin for sharing Obsidian vault content directly to Discord. Which I jankly edited to do a thing I needed",
+	"author": "PhD20, Fork:Smezydeer",
 	"authorUrl": "https://github.com/phd20",
 	"isDesktopOnly": false,
 	"fundingUrl": "https://patreon.com/phd20"
