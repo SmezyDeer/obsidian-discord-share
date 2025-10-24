@@ -12,7 +12,13 @@ import {
 	DiscordEmbedURL,
 } from "./constants";
 import { IEmbedDefaultAuthorSettings, IEmbedDefaultFieldsSettings, IEmbedDefaultFooterSettings, IEmbedPropertyOverrideSettings, ISettingsOptions } from "src/Settings";
-import { removeFrontmatter, replaceLinkAliases, removeWikiLinks, removeObsidianComments } from "../../src/util/markdown"; // TODO - Fix module imports as this is gross.
+import {
+	removeFrontmatter,
+	replaceLinkAliases,
+	removeWikiLinks,
+	removeObsidianComments,
+	replaceMarkdownLinkAliases
+} from "../../src/util/markdown"; // TODO - Fix module imports as this is gross.
 import { DiscordEmbedParamsBuilder } from "./DiscordEmbedParamsBuilder";
 
 export default class DiscordHelper {
@@ -102,7 +108,7 @@ export default class DiscordHelper {
 		formattedContent = removeObsidianComments(formattedContent);
 		formattedContent = replaceLinkAliases(formattedContent);
 		formattedContent = removeWikiLinks(formattedContent);
-
+		formattedContent = replaceMarkdownLinkAliases(formattedContent);
 		return formattedContent;
 	}
 }

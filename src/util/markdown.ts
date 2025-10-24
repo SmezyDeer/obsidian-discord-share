@@ -25,3 +25,11 @@ export const removeObsidianComments = (content: string) => {
 
 	return contentWithoutObsidianComments;
 }
+
+//This is literally the only change, added a regex to turn markdown links into just aliases. What a gamer.
+export const replaceMarkdownLinkAliases = (content: string) => {
+	const linkAliasRegex = /\[([^\]]+)\]\((?!https?:\/\/)[^)]+\)/g;
+	const contentWithLinkAliasesReplaced = content.replace(linkAliasRegex, (_, alias) => `${alias}`);
+
+	return contentWithLinkAliasesReplaced;
+}
